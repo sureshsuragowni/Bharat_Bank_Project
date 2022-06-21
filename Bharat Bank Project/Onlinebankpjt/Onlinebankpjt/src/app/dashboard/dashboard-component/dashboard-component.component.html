@@ -1,0 +1,143 @@
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+</head>
+<body>
+
+<h1 align="center">Dashboard</h1>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+     <br><br>
+      <ul class="nav nav-pills nav-stacked" >
+        <li><a class=" active" [routerLink]="['Accdtls']" target="_blank">Account Details</a></li>
+        <li><a [routerLink]="['Accsmry']">Account Summary</a></li>
+        <li><a [routerLink]="['Fnds']">Funds Transfer</a></li>
+        <li><a [routerLink]="['Accstmt']">Account Statement</a></li>
+      </ul><br>
+    </div>
+    <br>
+   
+    <div class="col-sm-9">
+      <div class="well">
+      
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a  [routerLink]="['Accstmt']" target="_blank">Account Statement</a>&nbsp;
+            <a  [routerLink]="['Fnds']">Funds Transfer</a>&nbsp;
+            <a  [routerLink]="['userp']">User Profile</a>&nbsp;
+            <a  [routerLink]="['Chgusr']">Change UserID Password</a>
+          </div>
+        </nav>
+
+      </div>
+      
+    </div>
+  
+  </div>
+</div>
+
+</body>
+</html>
+-->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    
+html,   
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 62.5%;
+  font-size: 10px;
+}
+
+.navbar div.main_list ul li a {
+  text-decoration: none;
+  color: rgb(26, 179, 240);
+  
+  font-size: 1.7rem;
+}
+
+.navbar div.main_list ul li a:hover {
+  color: #00E676;
+}
+.navbar div.main_list {
+  
+  float: right;
+}
+
+.navbar-header{
+    float:left;width: auto; height: auto; padding-left: 3rem;font-size: 1.7rem; margin-top:11px;
+}
+.nav-pills>li>a {
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+  div.main_list ul li a:hover{
+  color: #00E676;
+}
+ 
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row content">
+        <nav class="navbar navbar-inverse">
+ 
+            <div class="navbar-header" >
+                <a class="active" style="color:aquamarine">Dashboard</a>
+            </div>
+            <div  id="mainListDiv" class="main_list">
+              <ul class="nav navbar-nav">
+                <li ><a [routerLink]="['Accstmt']">Account Statement</a></li>
+                <li><a href="#">Funds Transfer</a></li>
+                <li><a href="#"> User Profile</a></li>
+                <li><a [routerLink]="['Chgusr']">ChangeUserId Password</a></li>
+              </ul>
+            </div>
+  
+        </nav>
+
+        <div class="col-sm-3 sidenav nav flex-column">
+          <br><br>
+          <div  id="mainListDiv" class="main_list">
+           <ul class="nav nav-pills nav-stacked" >
+             <li><a class=" active" [routerLink]="['Accdtls']" target="_blank">Account Details</a></li>
+             <li><a [routerLink]="['Accsmry']">Account Summary</a></li>
+             <li><a [routerLink]="['Fnds']">Funds Transfer</a></li>
+             <li><a [routerLink]="['Accstmt']">Account Statement</a></li>
+           </ul><br>
+          </div>
+         </div>
+      </div> 
+  </div> 
+
+
+  
+
+</body>
+</html>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->

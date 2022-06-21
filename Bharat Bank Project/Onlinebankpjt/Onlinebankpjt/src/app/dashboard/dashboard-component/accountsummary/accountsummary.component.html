@@ -1,0 +1,55 @@
+<!-- <p>accountsummary works!</p>
+<form >
+    <label>Login Password</label>
+    <input type="text"  id="loginPassword" name="loginPassword" formControlName="loginPassword" >
+    
+  <br>
+  
+    <label>Confirm Login Password</label>
+    <input type="text" name="confirmLoginPassword" id="confirmLoginPassword"  formControlName="confirmLoginPassword" >
+    <
+  <br>
+  
+    <label>Transcation Password</label>
+    <input type="text"  name="transactionPassword" id="transactionPassword"  formControlName="transactionPassword" >
+    
+   <button (click)="onclick()">submit</button>
+  <br>
+</form> -->
+
+<h3 align="center">Account Summary</h3>
+<form [formGroup]="form1" (ngSubmit)="Ongetdatabyid(form1)">
+  <div>
+    <label>Enter your accountNumber</label>
+    <input type="text" name="accno" id="accno" formControlName="accno"><br><br><br>
+    <button class="btn btn-danger" >GetbyID</button>
+  
+  </div>
+</form>
+  
+  <br><br>
+  
+  <div class="container">
+  <div style="text-align:center">
+  <table border="2px"   class="table table-striped">
+    <thead>
+    <tr  class="center">
+     <th  >Account Number</th>
+     <th >Name</th>
+     
+     <th >Balance</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr *ngFor="let prouse1 of dataid" width="3" class="table-info">
+      
+      <td class="bg-info">{{prouse1.accno}}</td>
+      <td class="bg-info">{{prouse1.name}}</td><!-- here loginPassword get from api run-->
+      
+      <td class="bg-info">{{prouse1.balance}}</td>
+     
+    </tr>
+  </tbody>
+  </table></div></div>

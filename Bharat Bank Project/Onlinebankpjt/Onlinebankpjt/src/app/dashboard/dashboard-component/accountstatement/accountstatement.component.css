@@ -1,0 +1,17 @@
+body{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://www.solidbackgrounds.com/images/1366x768/1366x768-light-steel-blue-solid-color-background.jpg");
+    background-repeat:no-repeat center center;
+    background-size:cover;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 10px;
+    width: 70%;
+    height: 40px;
+    background-color: white;
+    table-layout: fixed;
+}

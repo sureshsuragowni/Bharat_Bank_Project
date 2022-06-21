@@ -1,0 +1,224 @@
+<!-- <p class="text-center fs-3" [ngClass]="IsAccountCreated ? 'text-success pb-1':'text-danger pb-1'">{{displaymsg}}</p>
+<p style="text-align: center ;">changeuseridpwd works!</p>
+
+<table border="2px">
+  <thead>
+  <tr>
+   <th>Account Number</th>
+   <th>Login pwd</th>
+   <th>Confirm Login pwd</th>
+   <th>Transcation pwd</th>
+   <th>Confirm Transcation pwd</th>
+   <th>Enter Otp</th>
+   
+  </tr>
+</thead>
+<tbody>
+
+  <tr *ngFor="let prouse of data1" width="3">
+    <td>{{prouse.accountNumber}}</td>
+    <td>{{prouse.loginPassword}}</td>  here loginPassword get from api run-->
+    <!-- <td>{{prouse.confirmLoginPassword}}</td>
+    <td>{{prouse.transactionPassword}}</td>
+    <td>{{prouse.confirmTransactionPassword}}</td>
+    <td>{{prouse.enterOtp}}</td>
+   <td>
+     
+    <button class="btn btn-success" (click)="updatedata(prouse)">Update</button>
+  </td>
+  </tr>
+  
+</tbody>
+  
+</table>
+
+
+
+<router-outlet></router-outlet>
+
+
+<button class="btn btn-danger" (click)="Ongetdata()">Get</button>
+
+
+
+
+
+
+
+<br><br>
+<h1>Credit</h1>
+<form [formGroup]="formcredit" (ngSubmit)="OnCredit(formcredit)">
+  <div>
+    <label>Enter your accountNumber</label>
+    <input type="text" name="accno" id="accno" formControlName="accno"><br><br>
+    <label>Enter amount to credit </label>
+    <input type="text" name="creditamount" id="creditamount" formControlName="creditamount"><br>
+    <button class="btn btn-danger" >Submit</button>
+  
+  </div>
+</form>
+
+  <br><br>
+
+
+  <h1>Debit</h1>
+  <form [formGroup]="formdebit" (ngSubmit)="OnDebit(formdebit)">
+    <div>
+      <label>Enter your accountNumber</label>
+      <input type="text" name="accno" id="accno" formControlName="accno"><br><br>
+      <label>Enter amount to debit </label>
+      <input type="text" name="debitamount" id="debitamount" formControlName="debitamount"><br>
+      <button class="btn btn-danger" >Submit</button>
+    
+    </div>
+  </form>
+  
+    <br><br>
+
+
+
+
+    <form [formGroup]="formaccount" (ngSubmit)="Ongetdataaccount(formaccount)">
+      <div>
+        <label>Enter your accountNumber</label>
+        <input type="text" name="accno" id="accno" formControlName="accno">
+        <button class="btn btn-danger" >GetbyID</button>
+      
+      </div>
+    </form>
+      
+      
+      
+      
+      
+      <table border="2px">
+        <thead>
+        <tr>
+         <th>Account Number</th>
+         <th>Balance</th>
+         <th>Account Created</th>
+         <th>Credit Amount</th>
+         <th>Debit Amount</th>
+        
+         
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr *ngFor="let prouse1 of dataids" width="3">
+          <td>{{prouse1.accno}}</td>
+          <td>{{prouse1.balance}}</td><!-- here loginPassword get from api run
+          <td>{{prouse1.created}}</td>
+          <td>{{prouse1.creditamount}}</td>
+          <td>{{prouse1.debitamount}}</td>
+         
+         
+        </tr>
+      </tbody>
+      </table>
+
+
+
+
+
+
+
+
+<form [formGroup]="form"  (ngSubmit)="DatInsert(form)" style="margin: auto;">
+  
+  
+  <br>
+
+
+  <div>
+    <label>Login Password</label>
+    <input type="text"  id="loginPassword" name="loginPassword" formControlName="loginPassword" [(ngModel)]="passwordinsert">
+    <div *ngIf="form.controls['loginPassword'].errors && form.controls['loginPassword'].touched" class="text-danger">
+      <small *ngIf="form.controls['loginPassword'].errors ">Required</small>
+
+    </div>
+  </div>
+  <br>
+  <div>
+    <label>Confirm Login Password</label>
+    <input type="text" name="confirmLoginPassword" id="confirmLoginPassword"  formControlName="confirmLoginPassword" [(ngModel)]="cpasswordinsert">
+    <div *ngIf="form.controls['confirmLoginPassword'].errors && form.controls['confirmLoginPassword'].touched" class="text-danger">
+      <small *ngIf="form.controls['confirmLoginPassword'].errors ">Required</small>
+
+    </div>
+  </div>
+  <br>
+  <div>
+    <label>Transcation Password</label>
+    <input type="text"  name="transactionPassword" id="transactionPassword"  formControlName="transactionPassword" [(ngModel)]="tpasswordinsert">
+    <div *ngIf="form.controls['transactionPassword'].errors && form.controls['transactionPassword'].touched" class="text-danger">
+      <small *ngIf="form.controls['transactionPassword'].errors" >Required</small>
+
+    </div>
+  </div>
+  <br>
+  <div>
+    <label>Confirm Transcation Password</label>
+    <input type="text" name="confirmTransactionPassword" id="confirmTransactionPassword"  formControlName="confirmTransactionPassword" [(ngModel)]="ctpasswordinsert">
+    <div *ngIf="form.controls['confirmTransactionPassword'].errors && form.controls['confirmTransactionPassword'].touched" class="text-danger">
+      <small *ngIf="form.controls['confirmTransactionPassword'].errors" >Required</small>
+
+    </div>
+  </div>
+
+  <div>
+    <label>Enter OTP</label>
+    <input type="text" name="enterOtp" id="enterOtp"  formControlName="enterOtp" [(ngModel)]="otpinsert">
+    <div *ngIf="form.controls['enterOtp'].errors && form.controls['enterOtp'].touched" class="text-danger">
+      <small *ngIf="form.controls['enterOtp'].errors ">Required</small>
+
+    </div>
+  </div>
+  <button >Submit</button>
+  <br>
+  <br>
+</form>
+<br>
+  
+<br>
+  
+
+
+ --> 
+
+<!-- For update -->
+<h3 align="center">Update Password</h3>
+  <p class="text-center fs-3" [ngClass]="IsAccountCreated ? 'text-success pb-1':'text-danger pb-1'">{{displaymsg}}</p>
+<form [formGroup]="formupdates"  (ngSubmit)="DatUpdates(formupdates)" style="margin: auto;">
+  <div>
+    <label>Account Number</label>
+    <input type="text"  id="accountNumber" name="accountNumber" formControlName="accountNumber" >
+    
+  </div>
+ 
+  
+   
+  <br>
+
+  <div>
+    <label>Login Password</label>
+    <input type="text"  id="loginPassword" name="loginPassword" formControlName="loginPassword" >
+    
+  </div>
+  <br>
+  <div>
+    <label>Confirm Login Password</label>
+    <input type="text" name="confirmLoginPassword" id="confirmLoginPassword"  formControlName="confirmLoginPassword" >
+    
+  </div>
+  
+  <button  >Update</button>
+  <br>
+  <br>
+</form>
+<br>
+  
+<br>
+ 
+
+

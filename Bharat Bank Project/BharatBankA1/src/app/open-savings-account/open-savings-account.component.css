@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;1,300;1,400&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://wallpaperaccess.com/full/2311977.jpg");
+    background-repeat:no-repeat center center;
+    background-size:cover;
+    padding: 10px;
+    
+}
+.container{
+padding: 30px 40px;
+max-width: 700px;
+width: 100%;
+background:whitesmoke;
+opacity: 0.8;
+box-shadow: 0 5px 10px rgba(0, 0.1, 0.1, 1);
+border-radius: 2%;
+position: relative;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+/*.container .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}*/
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: cornflowerblue;
+    border-radius: 25px;
+}
+
+ /*.input-field{
+    position:relative;
+    height: 50px;
+    width: 80%;
+    margin-top: 25px;
+}
+.input-field input{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px ;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}*/
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user-details .input-field{
+    width: calc(100% /2 - 20px);
+}
+.user-details .input-field .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-field input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+.user-details .input-field input:focus,
+.user-details .input-field input:valid{
+    border-color:darkgoldenrod;
+}
+
+button{
+    background-color: dodgerblue;
+    font-size: 16px;
+    padding: 10px 50px;
+    border-radius: 12px;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color:darkblue;
+    color: dodgerblue;
+}
+
+

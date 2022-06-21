@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+    <div class="container">
+        
+<form class ="Login" [formGroup] = "form" (ngSubmit)="LoginInsert(form)"> <br>
+    <!--<div>
+        <label>ReferLogId :</label>
+        <input type="text" name="referLogId" formControlName="referLogId" >
+    </div>-->
+    <span class="title">Login</span>
+    <div class="input-field">
+        <label>User ID :</label>
+        <input type="text" id= "userID" formControlName="userID" placeholder="Enter User ID" maxlength="8" 
+        title="must enter 8 digit User Id" required >
+    </div>
+    <div class="input-field">
+        <label>Password :</label>
+        <input type="password" id= "password" name="password" formControlName="password" placeholder="Enter your password" minlength="8" maxlength="16"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title=" Password Must contain at least one number , one uppercase and lowercase letter , one special characters and at least 8 or more characters" required>
+    </div>
+    <br>
+    <div class="button">
+        <button type="submit" (click)="alertWithSuccess()">Sign in</button>
+    </div>
+</form><br>
+<div>
+    <p class="psw">Have you Registered for Internet Banking?<a style="color: blue;margin-top: 10px;" routerLink="/Register"> Click to Register</a></p>  
+</div>
+<div>
+    <p class="psw">Forgot User ID?<a style="color: blue;margin-top: 10px;" routerLink="/ForgotUserId"> Click Here</a></p>  
+</div>
+<div>
+    <p class="psw">Forgot Password?<a style="color: blue;margin-top: 10px;" routerLink="/ForgotPassword"> Click Here</a></p>  
+</div>
+<!--<div>
+    <button (click)="getData()">Get Data</button>
+</div>-->
+</div>
+</body>
+</html>

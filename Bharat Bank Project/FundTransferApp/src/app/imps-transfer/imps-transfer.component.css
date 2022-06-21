@@ -1,0 +1,14 @@
+.addform{
+    width:50%;
+    margin: auto;
+}
+label{
+    font-size: larger;
+}
+h2{
+    text-align: center;
+}
+#cont{
+    float: right;
+}
+

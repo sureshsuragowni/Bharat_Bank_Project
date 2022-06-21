@@ -1,0 +1,103 @@
+<body class="payment">
+
+
+<h2>Initiate Payment </h2>
+<!--<h2>Initiate IMPS Payment {{data}}</h2>-->
+
+<div class="addform">
+   <div class="form-group">
+    <label>From Account:</label>
+    <span class="border border-secondary">
+    <input class="form-control" minlength="10" maxlength="12" type="text" [(ngModel)]="fundTransfer.fromAccount" #fromacc="ngModel" ></span>
+    <span class="alert alert-danger" *ngIf="fromacc.touched && fromacc.errors">
+     <span *ngIf="fromacc.errors['required']">
+        Cannot be empty
+      </span>
+      <span *ngIf="fromacc.errors['minlength']">
+        Invalid entry 
+      </span>
+    </span>
+    </div>                                            
+    <div class="form-group">
+   <label>To Account:</label>
+   
+        <span class="border border-secondary">
+        <input class="form-control" required minlength="10" maxlength="12" type="text" [(ngModel)]="fundTransfer.toAccount" #toacc="ngModel" ></span>
+       
+        <span class="alert alert-danger" *ngIf="toacc.touched && toacc.errors">
+         <span *ngIf="toacc.errors['required']">
+            Cannot be empty
+          </span>
+          <span *ngIf="toacc.errors['minlength']">
+            Invalid entry 
+          </span>
+        </span>
+    </div>
+    
+    <div class="form-group">
+            <label>Amount:</label>
+            <span class="border border-secondary">
+            <input class="form-control" required  type="number" [(ngModel)]="fundTransfer.amount" #amt="ngModel" ></span>
+            <span class="alert alert-danger" *ngIf="amt.touched && amt.errors">
+              <span *ngIf="amt.errors['required']">
+                Cannot be empty
+              </span>
+        </span>
+    </div>
+    <div class="form-group">
+        <label>Transaction Date:</label>&nbsp;&nbsp;
+        <!--<span class="border border-secondary">
+        <input class="form-control" required value="{{dateTime | date:'medium'}}" type="datetime-local" [(ngModel)]="fundTransfer.transactionTime" #td="ngModel" ></span>
+        <span class="alert alert-danger" *ngIf="td.touched && td.errors">
+          <span *ngIf="td.errors['required']">
+            Cannot be empty
+          </span>
+    </span>-->
+    {{dateTime | date:'medium'}}
+    </div>
+    <br>
+
+    <!-- <div class="form-group">
+        <label>Maturity Instruction:</label>
+        <span class="border border-secondary">
+        <input class="form-control" required  type="text" [(ngModel)]="fundTransfer.maturityInstruction" #mi="ngModel" ></span>
+        <span class="alert alert-danger" *ngIf="mi.touched && mi.errors">
+          <span *ngIf="mi.errors['required']">
+            Cannot be empty
+          </span>
+    </span>
+    </div> -->
+    <div class="form-group">
+      <label>Payment Mode:</label>&nbsp;&nbsp;
+      <span class="border border-secondary">
+      <select [(ngModel)]="fundTransfer.mode" #mode="ngModel" required>
+        <option value="0">--Select Options--</option>
+        <option value="IMPS">IMPS</option>
+        <option value="NEFT">NEFT</option>
+        <option value="RTGS">RTGS</option>
+       </select></span>
+       <span class="alert alert-danger" *ngIf="mode.touched && mode.errors">
+        <span *ngIf="mode.errors['required']">
+          Cannot be empty
+        </span>
+      </span>
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label>Remark:</label>
+        <span class="border border-secondary">
+        <input class="form-control" required  type="text" [(ngModel)]="fundTransfer.remark" #remark="ngModel" ></span>
+        <span class="alert alert-danger" *ngIf="remark.touched && remark.errors">
+          <span *ngIf="remark.errors['required']">
+            Cannot be empty
+          </span>
+    </span>
+    </div>
+    <button class="btn btn-primary" (click)="reset()">Reset</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" (click)="addnew()">Add New +</button>&nbsp;&nbsp;
+    <button id="cont" class="btn btn-primary" (click)="addImps()">Continue</button>
+</div>
+
+  
+</body>

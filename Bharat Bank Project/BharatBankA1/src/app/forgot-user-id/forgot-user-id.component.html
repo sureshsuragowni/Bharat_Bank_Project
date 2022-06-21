@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot UserID</title>
+    <link rel="stylesheet" href="forgot-user-id.component.css">
+</head>
+<body>
+    <div class="container">
+<form class ="ForgotUserID" [formGroup] = "form" (ngSubmit)="ForgotUserIdInsert(form)"> <br>
+    <!--<div>
+        <label>reference UserId :</label>
+        <input type="text" name="referenceUserId" formControlName="referenceUserId" >
+    </div><br>-->
+    <span class="title">Forgot UserID</span>
+    <div class="input-field">
+        <label>Account No. :</label>
+        <input type="text" id= "accountNumber" name="accountNumber" formControlName="accountNumber" placeholder="12 digit Account Number"
+        title="must enter 12 digit Aadhar number" required>
+    </div><br>
+    <div class="input-field">
+        <label>Email Id :</label>
+        <input type="text" id= "emailId" name="emailId" formControlName="emailId" placeholder="Enter Email-Id" required>
+    </div><br>
+    <div class="input-field">
+        <label>Otp :</label>
+        <input type="text" id= "otp" name="otp" formControlName="otp" placeholder="Enter One-Time-Password" 
+        title="must enter 6 digit Code" required>
+    </div><br>
+    <div class="button">
+        <button (click)="alertWithSuccess()">Submit</button>
+    </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.addform{
+    width:50%;
+    margin: auto;
+}
+label{
+    font-size: larger;
+}
+h2{
+    text-align: center;
+}
+#save{
+    margin-left: 275px;
+    margin-right: 275px;
+}

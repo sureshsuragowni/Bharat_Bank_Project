@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<app-menu-fund></app-menu-fund>
+
+  <app-imps-transfer></app-imps-transfer> 
+<app-neft-transfer></app-neft-transfer>
+<app-rtgs-transfer></app-rtgs-transfer>
+<app-add-beneficiary></app-add-beneficiary> 
+<router-outlet></router-outlet>
+</body>
+</html> -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Userpage</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--Navbar-->
+  <nav>
+    <ul>
+      <li class="logo">Bharat Bank</li>
+      <li class="btn"><span class="fas fa bars"></span></li>
+      <div class="items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact At</a></li>
+        <li><a href="#">Find ATM/Branch</a></li>
+        <li><a routerLink="menu">Fund Transfer</a></li>
+      </div>
+      <li class="search-icon">
+        <input type="search" placeholder="Search">
+        <label class="icon">
+        <span class="fas fa-search"></span></label>
+      </li>
+    </ul>
+  </nav>
+ <!--/.Navbar-->
+ <router-outlet></router-outlet>
+ 
+</body>
+</html>

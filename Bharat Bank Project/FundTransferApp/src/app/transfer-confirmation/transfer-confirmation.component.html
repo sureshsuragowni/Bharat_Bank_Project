@@ -1,0 +1,60 @@
+ <div class="addform"><div class="headd"><h2>Transfer Successful</h2></div>
+
+<div>
+<table border="2px">
+    <tr>
+        <td class="leftval">
+            Reference ID
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.referenceId}}</td>
+    </tr>
+    <tr>
+        <td class="leftval">
+            Mode
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.mode}}</td>
+    </tr>
+    <tr>
+        <td class="leftval">
+            Paid to Account
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.toAccount}}</td>
+    </tr>
+    <tr>
+        <td class="leftval">
+            Amount
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.amount}}</td>
+    </tr>
+    <tr>
+        <td class="leftval">
+          From Account
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.fromAccount}}</td>
+    </tr>
+    <tr>
+        <td class="leftval">
+          On
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.transactionTime}}</td>
+    </tr>
+    <tr>
+        <td class="leftval">
+         Remark
+        </td>
+        <td class="midval">-</td>
+        <td class="rightval">{{fundTransfer.remark}}</td>
+    </tr>
+    <tr>
+        <button class="btn btn-primary" (click)="direct()">Back to List</button>
+    </tr>
+
+  </table>
+  </div> 
+</div>

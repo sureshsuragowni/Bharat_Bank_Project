@@ -1,0 +1,31 @@
+.headd{
+    border: 1px;
+    margin-left: 10%;
+
+}
+.leftval{
+    text-align: left;
+}
+.midval{
+    text-align: center;
+}
+.rightval{
+    text-align: right;
+}
+/*div{
+    width:50%;
+    margin: auto;
+}*/
+.addform{
+    width:80%;
+    height: 80%;
+    
+    margin-left:450px;
+    margin-top:200px;
+    margin-bottom: 200px;
+}
+table{
+    border-spacing: 20px;
+    width: 500px;
+    height: 400px;
+}

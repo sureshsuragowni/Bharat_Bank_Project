@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400;1,600&family=Tiro+Tamil:ital@0;1&display=swap');
+*{
+    
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Tiro Tamil', serif;
+}
+nav{
+    background: #222222;
+    padding: 5px 20px 5px 5px;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+}
+nav ul{
+    display:flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li.logo{
+    flex:1;
+    font-size: 30px;
+    font-weight: 700;
+    color:#f2f2f2;
+}
+nav ul div.items{
+    padding: o 25px;
+    display: inline-flex;
+    
+}
+nav ul div.items a{
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 0 12px;
+}
+nav ul div.items a:hover{
+    color: cyan;
+}
+nav ul .search-icon{
+    height: 40px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+nav ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+}
+nav ul .search-icon .icon{
+    height: 95%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+}
+nav ul .search-icon .icon:hover{
+    background: #e6e6e6;
+}
+nav ul .search-icon .icon span{
+   color:#222222;
+   font-size: 18px;
+}
+@media screen and (max-width:1052) {
+    nav{
+        padding: 10px 40px 10px 0px;
+    }
+    nav ul li.logo{
+        display: none;
+    }
+    nav ul div.items{
+        flex: 4;
+    }
+}
+

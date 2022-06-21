@@ -1,0 +1,41 @@
+
+<h3 align="center">Account Details</h3>
+<form [formGroup]="form1" (ngSubmit)="Ongetdatabyid(form1)">
+  <div>
+    <label>Enter your accountNumber</label>
+    <input type="text" name="accno" id="accno" formControlName="accno">&nbsp;&nbsp;<br><br><br>
+    <button class="btn btn-danger" >GetbyID</button>
+  
+  </div>
+</form>
+  
+  <br><br>
+  
+  
+  <div class="container">
+    <div style="text-align:center">
+  <table border="2px" class="table " style="margin: auto;">
+    <thead>
+    <tr class="center">
+     <th scope="col">Account Number</th>
+     <th scope="col">Name</th>
+     <th scope="col">Mobile number</th>
+     <th scope="col">Aadhar number</th>
+     <th scope="col">Date of Birth</th>
+     <th scope="col">Address</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr *ngFor="let prouse1 of dataid" width="3">
+      <td class="bg-info">{{prouse1.accno}}</td>
+      <td class="bg-info">{{prouse1.name}}</td><!-- here loginPassword get from api run-->
+      <td class="bg-info">{{prouse1.mobile}}</td>
+      <td class="bg-info">{{prouse1.aadhar}}</td>
+      <td class="bg-info">{{prouse1.dob}}</td>
+      <td class="bg-info">{{prouse1.address}}</td>
+     
+    </tr>
+  </tbody>
+  </table></div></div>

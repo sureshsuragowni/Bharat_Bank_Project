@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Savings Account</title>
+    <link rel="stylesheet" href="open-savings-account.component.css">
+</head>
+<body>
+    <div class="container">
+    <form action="#" [formGroup] = "form" (ngSubmit)="OpenSavingsAccountInsert(form)"> <br>
+    <!--<div>
+        <label>Reference ID :</label>
+        <input type="text" name="referenceId" formControlName="referenceId" >
+    </div><br>-->
+    <span class="title">Open Savings Account</span>
+    <br>
+    <br>
+    <div class="user-details">
+      <div class="input-field">
+        <span  class="details">Title :</span>
+        <input type="text" id= "title" name="title" formControlName="title" placeholder="Mr / Mrs" required>
+       </div>
+    <div class="input-field">
+        <span class="details">First Name :</span>
+        <input type="text" id= "firstName" name="firstName" formControlName="firstName" placeholder="Enter First Name" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Middle Name :</span>
+        <input type="text" id= "middleName" name="middleName" formControlName="middleName" placeholder="Enter Middle Name" required>
+        </div>
+    <div class="input-field">
+        <span class="details">Last Name :</span>
+        <input type="text" id= "lastName" name="lastName" formControlName="lastName" placeholder="Enter Last Name" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Father Name :</span>
+        <input type="text" id= "fatherName" name="fatherName" formControlName="fatherName" placeholder="Enter Father Name" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Husband Name :</span>
+        <input type="text" id= "husbandName" name="husbandName" formControlName="husbandName" placeholder="Enter Husband Name">
+    </div>
+    <div class="input-field">
+        <span class="details">Email ID :</span>
+        <input type="text" id= "emailId" name="emailId" formControlName="emailId" placeholder="Enter Email-Id" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Mobile Number :</span>
+        <input type="text" id= "mobileNumber" name="mobileNumber" formControlName="mobileNumber" placeholder="Enter Mobile Number" maxlength="10" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Aadhar Card Number :</span>
+        <input type="text" id= "aadharCardNumber" name="aadharCardNumber" formControlName="aadharCardNumber" placeholder="Enter 12 digit Aadhar-Number" 
+        title="must enter 12 digit Aadhar number" maxlength="12" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Date Of Birth :</span>
+        <input type="text" id= "dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth" placeholder="dd/mm/yyyy" 
+        title="must enter the dob in the required format" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Address Line 1 :</span>
+        <input type="text" id= "addressLine1" name="addressLine1" formControlName="addressLine1" placeholder="Enter Address Line 1" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Address Line 2:</span>
+        <input type="text" id= "addressLine2" name="addressLine2" formControlName="addressLine2" placeholder="Enter Address Line 2" required>
+    </div>
+    <div class="input-field">
+        <span class="details">LandMark :</span>
+        <input type="text" id= "landMark" name="landMark" formControlName="landMark" placeholder="Enter The LandMark" >
+    </div>
+    <div class="input-field">
+        <span class="details">State :</span>
+        <input type="text" id= "state" name="state" formControlName="state" placeholder="Enter The State" required>
+    </div>
+    <div class="input-field">
+        <span class="details">City :</span>
+        <input type="text" id= "city" name="city" formControlName="city" placeholder="Enter The City" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Pin Code :</span>
+        <input type="text" id= "pinCode" name="pinCode" formControlName="pinCode" placeholder="Enter 6-digit Pincode" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Source Of Income :</span>
+        <input type="text" id= "sourceOfIncome" name="sourceOfIncome" formControlName="sourceOfIncome" placeholder="Enter Your Source of Income" required>
+    </div>
+    <div class="input-field">
+        <span class="details">Gross Annual Salary :</span>
+        <input type="text" id= "grossAnnualSalary" name="grossAnnualSalary" formControlName="grossAnnualSalary" placeholder="Enter Your Annual Salary" required>
+    </div>
+    <br>
+    <div class="button">
+        <button (click)="alertWithSuccess()">Save Data</button>
+    </div>
+</div>
+</form>
+<!--<div>
+    <button (click)="getData()">Get Data</button>
+</div>-->
+</div>
+</body>
+</html>

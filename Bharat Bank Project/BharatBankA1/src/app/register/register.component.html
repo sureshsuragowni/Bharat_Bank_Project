@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="register.component.css">
+</head>
+<body>
+    <div class="container">
+    
+<form class ="Register" [formGroup] = "form" (ngSubmit)="RegisterInsert(form)"> <br>
+    <!--<div>
+        <label>Refer Register ID :</label>
+        <input type="text" name="referRegId" formControlName="referRegId" >
+    </div>-->
+    <span class="title">Registration</span>
+    <div class="input-field">
+        <label>User ID :</label>
+        <input type="text" id= "userId" name="userId" formControlName="userId" placeholder="Enter UserId" maxlength="8" 
+        title="must enter 8 digit User Id" required>
+    </div>
+    <div class="input-field">
+        <label>Login Password :</label>
+        <input type="password" id= "loginPassword" name="loginPassword" formControlName="loginPassword" placeholder="Enter Login Password" minlength="8" maxlength="16"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title=" Password Must contain at least one number , one uppercase and lowercase letter , one special characters and at least 8 or more characters" required>
+    </div>
+    <div class="input-field">
+        <label>Confirm Login Password :</label>
+        <input type="password" id= "confirmLoginPassword" name="confirmLoginPassword" formControlName="confirmLoginPassword" placeholder="Re-Enter Login Password" minlength="8" maxlength="16"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title=" Password Must contain at least one number , one uppercase and lowercase letter , one special characters and at least 8 or more characters" required>
+    </div>
+    <div class="input-field">
+        <label>Email Id :</label>
+        <input type="text" id= "emailId" name="emailId" formControlName="emailId" placeholder="Enter Your Email-id" required>
+    </div>
+    <div class="input-field">
+        <label>Mobile Number :</label>
+        <input type="text" id= "mobileNumber" name="mobileNumber" formControlName="mobileNumber" placeholder="Enter Mobile Number" maxlength="10" required>
+    </div>
+    <br>
+    <div class="button">
+        <button (click)="alertWithSuccess()">Sign up</button>
+    </div><br>
+    <div class="text-field">
+        <!--<p class="register">New User?? <a href="#">Register</a></p>-->
+        <p class="psw">Don't Have an Account ? <a style="color: blue;margin-top: 10px;" routerLink="/OpenSavingsAccount"> Open an Account</a></p>  
+    </div>
+    
+</form>
+<!--<div class="button">
+    <button (click)="getData()">Get Data</button>
+</div>-->
+</div>
+</body>
+</html>

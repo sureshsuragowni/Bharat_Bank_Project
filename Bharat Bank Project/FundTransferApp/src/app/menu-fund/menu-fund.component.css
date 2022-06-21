@@ -1,0 +1,16 @@
+body{
+  background-image: url('https://wallpaperaccess.com/full/2311977.jpg');
+  position: relative;  
+  background-repeat: no-repeat;   
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+}
+
+.addform{
+    width:50%;
+    margin: 150px 400px;
+    margin-left: 600px;
+    
+
+}
